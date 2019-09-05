@@ -1,0 +1,5 @@
+Given a matrix of M x N elements (M rows, N columns), return all elements of the matrix in diagonal order as shown in the below image.
+
+<img width="635" alt="Screen Shot 2019-09-05 at 12 11 59 PM" src="https://user-images.githubusercontent.com/46575719/64371984-c2395900-cfd6-11e9-9477-0ebae28cc6a2.png">
+
+Note: The total number of elements of the given matirx will not exceed 10,000.
