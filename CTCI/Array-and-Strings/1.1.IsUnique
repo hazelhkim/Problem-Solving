@@ -1,0 +1,38 @@
+### My Answer
+
+```java
+
+boolean isUnique(String str) {
+	
+	if (str.size() > 128) {return false;}
+	
+boolean[] table = new boolean[128];
+
+	for(int i = 0; i < str.size(); i++)  {
+		**char** strChar = **Character**.charAt(i);   -> **int strChar = str.charAt(i);**
+		if (table[strChar]) {
+return false;
+}
+table[strChar] = true;
+}
+return true;
+}
+```
+
+Textbook Answer
+another approach:  -> **Bit Masking**
+( In computer science, a mask or bitmask is data that is used for bitwise operations, particularly in a bit field.) 
+
+```java
+boolean isUnique (String str) {
+int checker = 0;
+for (int i = 0; i < str.length(); i++) {
+	int val = str.charAt(i) - ‘a’;
+	if ((checker & ( 1<< val)) > 0) {
+	return false;
+}
+checker |= ( 1 << val );
+}
+return true;
+}
+```
