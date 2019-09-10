@@ -1,6 +1,7 @@
 # Problem-Solving
 
-## Leetcode_Top Interview Questions
+## Leetcode
+### Top Interview Questions (Easy Collection)
 #### Array 
 #### Strings
 #### Linked List
