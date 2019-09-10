@@ -26,3 +26,26 @@ for (int i = 0; i < len; i++) {
     print(nums[i]);
 }
 ```
+
+
+### My Answer:
+```java
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        
+        boolean[] check = new boolean[128];
+        StringBuilder answer = new StringBuilder();
+        
+        for(int num : nums) {
+
+            char charAt
+            if(!check[num]) {
+                answer.append(num);
+                check[num] = true;
+            }
+        }
+        return Integer.parseInt(answer.toString());
+    }
+}
+
+```
