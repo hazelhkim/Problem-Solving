@@ -1,6 +1,6 @@
 # Problem-Solving
 
-## Leetcode
+## LeetCode
 ### Top Interview Questions (Easy Collection)
 #### Array 
 #### Strings
