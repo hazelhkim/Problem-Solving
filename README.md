@@ -2,8 +2,7 @@
 
 ## Leetcode_Top Interview Questions
 #### Array 
-
-#### String
+#### Strings
 #### Linked List
 #### Trees
 #### Sorting and Searching
