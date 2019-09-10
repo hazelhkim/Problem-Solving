@@ -1,0 +1,109 @@
+## Approach #1. 
+#### My Answer:
+```java
+
+boolean checkPermutation (String str1, String str2) {
+
+	if(str1.size() ! = str2.size()) return false;
+
+	char[] char1 = str1.toCharArray();
+	char[] char2 = str2.toCharArray();
+
+	Java.util.Arrays.sort(char1);
+	Java.util.Arrays.sort(char2);
+
+	return char1 == char2;
+
+}
+
+```
+space = O(2n) = O(n) <br />
+time = O(1)
+
+#### Textbook:
+
+```java
+String sort (String s) {
+	char[] content = s.toCharArray();
+	java.util.Arrays.sort(content);
+	return new String(content);
+}
+
+boolean permutations ( String s, String t ) {
+	if(s.length() != t.length())   return false;
+	return sort(s).equals(sort(t));
+}
+
+```
+Whey they needed to be Strings to be compared.?, not char[].<br />
+
+Also,  what I needed to consider/consult with interviewer before I plan and make this code:<br />
+
+1. Case-sensitive or not.<br />
+2. Whitespace is significant or not.<br />
+3. Strings of different lengths cannot be permutations of each other. (이거는 당연한거).<br />
+
+
+## Approach #2. 
+
+#### My Answer:
+
+```java
+
+boolean checkPermutation (String str1, String str2) {
+
+	if(str1.size() != str2.size()) return false;
+
+	int[] table = int[128]; 		// ASCII number size = 128
+
+	for( int i = 0; i < str1.length(); i++ ) {
+int val1 = str1.charAt(i);
+table[val1] ++;
+}
+	for( int j = 0; j <  str2.length(); j ++) {
+		int val2 = str2.charAt(j);
+		table[val2] --;
+		if (table[val2] < 0) return false;
+}
+return true;
+}
+
+```
+space = O(2n) = O(n)<\br >
+time = O(2n) = O(n)<\br >
+
+1. Definition of a Permutation: two words with the same character counts. <\br >
+2. Simply iterate through the code and count how many times each character appears.<\br >
+
+#### Textbook:
+
+답지에서는 이 approach를 이렇게 했어.. char를 for-loop밖에서 integer array로 만들고, for-loop안에서 char을 바로 꺼내서 int array안에 index로 활용하는 방법이 있어. 	
+
+```java
+
+
+boolean permutation (String s, String t) {
+
+if(s.length() != t.length())  return false;
+
+
+int[] letters = new int[128];
+char[] s_array = s.toCharArray();
+
+for(char c : s_array) {
+letters[c]++;
+}
+
+for(int i = 0; i < t.length(); i++) {
+	int c = (int) t.charAt(i);
+	letters[c]--;
+	if(letters[c] < 0) return false;
+}
+return true;
+}
+
+```
+
+
+
+
