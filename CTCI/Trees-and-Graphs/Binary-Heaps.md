@@ -12,6 +12,7 @@
 
 <img width="787" alt="Screen Shot 2019-09-11 at 3 44 15 PM" src="https://user-images.githubusercontent.com/46575719/64740706-177bdb80-d4ab-11e9-9c84-08aaff387526.png">
 This takes O(log n) time, where n is the number of nodes in the heap. <br />
+<br />
 
 **Extract Minimum Element** 
 <br />
