@@ -6,7 +6,7 @@
 
 3) We have two key operations on a min-heap: **insert** and **extract_min**.
 
-#### Insert
+### Insert
 
 1) When we insert into a min-heap, we always start by inserting the element at the bottom. We insert at the rightmost spot so as to maintain the complete tree property. <br />
 2) Then, we "fix" the tree by swapping the new element with its parent, until we find an appropriate spot for the element. We essentially bubble up the minimum element. 
@@ -15,7 +15,7 @@
 This takes O(log n) time, where n is the number of nodes in the heap. <br />
 
 
-#### Extract Minimum Element
+### Extract Minimum Element
 
 Finding the minimum element of a min-heap is easy: it's always at the top. The trickier part is how to remove it. (In fact, this isn't that tricky.) <br />
 
