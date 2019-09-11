@@ -22,6 +22,7 @@ Finding the minimum element of a min-heap is easy: it's always at the top. The t
 1) We remove the minimum element and swap it with the last element in the heap (the bottommost, rightmost element). 
 2) Then, we bubble down this element, swapping it with one of its children until the min-heap property is restored. 
 
--> Do we swap it with the left child or the right child? That depends on their values. There's no inherent ordering between the left and right element, but you'll need to take the smaller one in order to maintain the min-heap ordering. 
+-> Do we swap it with the left child or the right child? That depends on their values. There's no inherent ordering between the left and right element, but you'll need to take the smaller one in order to maintain the min-heap ordering. <br />
+
 <img width="761" alt="Screen Shot 2019-09-11 at 3 59 00 PM" src="https://user-images.githubusercontent.com/46575719/64741374-1b106200-d4ad-11e9-84c9-81a179155e0b.png"> <br />
 This algorithm wil also take O(log n) time.
