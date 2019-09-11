@@ -32,19 +32,16 @@ for (int i = 0; i < len; i++) {
 ```java
 class Solution {
     public int removeDuplicates(int[] nums) {
-        
-        boolean[] check = new boolean[128];
-        StringBuilder answer = new StringBuilder();
-        
-        for(int num : nums) {
-
-            char charAt
-            if(!check[num]) {
-                answer.append(num);
-                check[num] = true;
+       
+        int count = 1;
+        if(nums.length==0) return 0;
+        for(int i = 1; i < nums.length; i++) {
+            if(nums[i-1]!=nums[i]) {
+                nums[count] = nums[i];
+                count++;
             }
         }
-        return Integer.parseInt(answer.toString());
+        return (count);
     }
 }
 
