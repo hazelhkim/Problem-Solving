@@ -14,7 +14,7 @@
 This takes O(log n) time, where n is the number of nodes in the heap. <br />
 <br />
 
-**Extract Minimum Element** 
+**Extract Minimum Element** <br />
 <br />
 Finding the minimum element of a min-heap is easy: it's always at the top. The trickier part is how to remove it. (In fact, this isn't that tricky.) <br />
 
