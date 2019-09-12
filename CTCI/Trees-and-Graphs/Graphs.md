@@ -9,15 +9,14 @@ GRAPH <br />
 
 - A graph is a collectin of nodes with edges between (some of) them. 
 - Graphs can be either directed (like the following graph) or undirected. 
+- The graph might consist of multiple isolated subgraphs. 
+- The graph can also have cycles (or not). 
 
 **directed edges**
 a one-way street
 
 **undirected edges**
 like a two-way street
-
-- The graph might consist of multiple isolated subgraphs. 
-- The graph can also have cycles (or not). 
 
 **connected graph**
 A graph that has a path between every pair of vertices. 
