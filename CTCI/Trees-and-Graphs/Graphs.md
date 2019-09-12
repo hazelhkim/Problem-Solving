@@ -4,7 +4,9 @@ TREE
 - A tree is actually a type of graph, but not all graphs are trees. 
 - A tree is a connected graph without cycles. 
 <br />
+
 GRAPH <br />
+
 - A graph is a collectin of nodes with edges between (some of) them. 
 - Graphs can be either directed (like the following graph) or undirected. 
 
