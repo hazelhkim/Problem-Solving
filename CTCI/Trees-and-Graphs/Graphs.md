@@ -14,17 +14,10 @@ GRAPH <br />
 
 <br />
 
-**directed edges**
-a one-way street
-
-**undirected edges**
-like a two-way street
-
-**connected graph**
-A graph that has a path between every pair of vertices. 
-
-**acyclic graph**
-A graph that has no cycles. 
+- **directed edges** : a one-way street
+- **undirected edges** : like a two-way street
+- **connected graph** : a graph that has a path between every pair of vertices. 
+- **acyclic graph** : a graph that has no cycles. 
 
 <br />
 Visually, a graph is like this:
