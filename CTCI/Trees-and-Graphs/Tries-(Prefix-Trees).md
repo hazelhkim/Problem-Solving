@@ -12,6 +12,6 @@
 - This is actually the same runtime as a hash table will take. 
 - Although we often refer to hash table lookups as being O(1) time, this isn't entirely true. 
 - A hash table must read through all the characters in the input, which takes O(K) time in the case of a word lookup.
-- Many problems involving lists of valid words leverage a trie as an optimazation. In situations when we search through the tree on related prefixes repeatedly (e.g., looking up M, then MA, then MAN, then MANY), we mighnt pass around a reference to the current node in the tree.
+- Many problems involving lists of valid words leverage a trie as an optimazation. In situations when we search through the tree on related prefixes repeatedly (e.g., looking up M, then MA, then MAN, then MANY), we might pass around a reference to the current node in the tree.
 This will allow us to just chekc if Y is a child of MAN, rather than starting from the root each time. 
 
