@@ -1,21 +1,42 @@
 ## Graphs
 
-A tree is actually a type of graph, but not all graphs are trees. Simply put, a tree is a connected graph without cycles. 
+TREE
+- A tree is actually a type of graph, but not all graphs are trees. 
+- A tree is a connected graph without cycles. 
 <br />
-A graph is simply a collectin of nodes iwht edges between (some of) them. 
-- Graphs can be either directed (like the following graph) or undirected. While directed edges are like a one-way street, undirected edges are liek a two-way street.
-- The graph might consist of multiple isolated subgraphs. If there is a path between every pair of vertices, it is called a "connected graph."
-- The graph can also have cycles (or not). An "acyclic graph" is one without cycles.
-<br />
-Visually, you could draw a graph like this:
+GRAPH
+- A graph is a collectin of nodes with edges between (some of) them. 
+- Graphs can be either directed (like the following graph) or undirected. 
 
-<img width="660" alt="Screen Shot 2019-09-12 at 1 31 36 PM" src="https://user-images.githubusercontent.com/46575719/64818797-aea36a80-d561-11e9-81c2-312b652caf31.png">
+**directed edges**
+a one-way street
+
+**undirected edges**
+like a two-way street
+
+- The graph might consist of multiple isolated subgraphs. 
+- The graph can also have cycles (or not). 
+
+**connected graph**
+A graph that has a path between every pair of vertices. 
+
+**acyclic graph**
+A graph that has no cycles. 
+
+<br />
+Visually, a graph is like this:
+
+<img width="604" alt="Screen Shot 2019-09-12 at 3 43 42 PM" src="https://user-images.githubusercontent.com/46575719/64825997-237fa000-d574-11e9-9323-f425e2d782f5.png">
 
 ### Adjacent List
 
-This is the most common way to represent a graph. Every vertex (or node) stores a list of adjacent vertices. In an undirected graph, an edge liek (a, b) would be sgtored twice: once in a's adjacent vertices and once in b's adjacent vbertices. 
+- This is the most common way to represent a graph. 
+- Every vertex (or node) stores a list of adjacent vertices. 
+
+In an undirected graph, an edge like (a, b) would be stored twice: once in a's adjacent vertices and once in b's adjacent vbertices. 
 <br />
 A simple class definition for a graph node could look essentially the same as a tree node. 
+
 ```java
 class Graph {
     public Node[] nodes;
@@ -30,7 +51,7 @@ class Node {
 The Graph class is used beacuse, unlike in a tree, you can't necessarily reach all the nodes from a single node. 
 <br />
 
-You don't necessarily need any additional classes to represent a graph. An array (or a hash table) of lists ( arrays, arraylists, linked lists, etc.) can store the adjacency list. The graph above could be represented as:
+You don't necessarily need any additional classes to represent a graph. An array (or a hash table) of lists ( arrays, arraylists, linked lists, etc.) can store the adjacency list. The graph above could be represented as: <br />
 0: 1 <br />
 1: 2 <br />
 2: 0,3 <br />
@@ -46,9 +67,13 @@ This is a bit more compact, but it isn't quite as clean. We tend to use node cla
 An adjacency matrix is an NxN boolean matrix (where N is the number of nodes), where a true value at matrix[i][j] indicates an edge from node i to node j.
 (You can also use an integer matrix with 0s and 1s.)
 <br />
-In an undirected graph, an adjacency matrix will be symmetric. In a directed graph, it will not (necessarily) be. 
+- In an **undirected graph**, an adjacency matrix will be **symmetric**. 
+- In a **directed graph**, it will **not (necessarily) be**. 
 
+<img width="663" alt="Screen Shot 2019-09-12 at 3 45 01 PM" src="https://user-images.githubusercontent.com/46575719/64826042-51fd7b00-d574-11e9-9f01-a389a938cae9.png">
 
+<Supplemental Explanation> <br />
+The same graph algorithms that are used on adjacency lists (breadth-first search, etc.) can be performed with adjacency matrices, but they may be somewhat less efficient. In the adjacency list representation, you can easily iterate through the neighbors of a node. In the adjacency matrix representation, you will need to iterate through all the nodes to identify a node's neighbors. 
 
 ### Graph Search 
 
@@ -60,6 +85,4 @@ The two most common ways to search a graph are depth-frist search and breadth-fi
 See the below depiction of a graph and its depth-first and breadth-first search (assuming neighbors are iterated in numerical order).
 
 <img width="660" alt="Screen Shot 2019-09-12 at 1 31 36 PM" src="https://user-images.githubusercontent.com/46575719/64818797-aea36a80-d561-11e9-81c2-312b652caf31.png">
-
-
 
