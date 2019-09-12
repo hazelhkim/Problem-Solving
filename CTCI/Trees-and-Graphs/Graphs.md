@@ -12,6 +12,7 @@ GRAPH <br />
 - The graph might consist of multiple isolated subgraphs. 
 - The graph can also have cycles (or not). 
 
+<br />
 **directed edges**
 a one-way street
 
