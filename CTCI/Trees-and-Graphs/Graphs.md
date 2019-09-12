@@ -9,8 +9,9 @@ A graph is simply a collectin of nodes iwht edges between (some of) them.
 <br />
 Visually, you could draw a graph like this:
 
+<img width="660" alt="Screen Shot 2019-09-12 at 1 31 36 PM" src="https://user-images.githubusercontent.com/46575719/64818797-aea36a80-d561-11e9-81c2-312b652caf31.png">
 
-### Adfacent List
+### Adjacent List
 
 This is the most common way to represent a graph. Every vertex (or node) stores a list of adjacent vertices. In an undirected graph, an edge liek (a, b) would be sgtored twice: once in a's adjacent vertices and once in b's adjacent vbertices. 
 <br />
