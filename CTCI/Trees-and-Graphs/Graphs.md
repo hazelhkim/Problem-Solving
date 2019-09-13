@@ -75,10 +75,15 @@ The same graph algorithms that are used on adjacency lists (breadth-first search
 
 The two most common ways to search a graph are depth-frist search and breadth-first search. <br />
 
-- In depth-first search (DFS), we start at the root (or another arbitrarily selected node) and explore each branch compeletely before moving on to the next branch. That is, we go deep first (hence thename depth-first search) before we go wide.
-- In bread-first search (BFS), we start at the root (or another arbitrarily selected node) and explore each neighbor before going on to any of their children. That is, we go wide (hence the name depth-first search) before we go deep.
+- In **depth-first search (DFS)**, we start at the root (or another arbitrarily selected node) and explore each branch compeletely before moving on to the next branch. That is, we go deep first (hence thename depth-first search) before we go wide.
+- In **bread-first search (BFS)**, we start at the root (or another arbitrarily selected node) and explore each neighbor before going on to any of their children. That is, we go wide (hence the name depth-first search) before we go deep.
 
 See the below depiction of a graph and its depth-first and breadth-first search (assuming neighbors are iterated in numerical order).
 
 <img width="660" alt="Screen Shot 2019-09-12 at 1 31 36 PM" src="https://user-images.githubusercontent.com/46575719/64818797-aea36a80-d561-11e9-81c2-312b652caf31.png">
 
+- Breadth-first search and depth-first search tend to be used in different scenarios. DFS is often preferred if we want to visit every node in the graph. Both will work just fine, but depth-first search is a bit simpler. 
+- However, if we want to find the shortest path (or just any path) between two nodes, BFS is generally better.
+- Consider representing all the friendships in the entire world in a graph and trying to find a path of firendships between Ash and Vanessa.
+
+- In depth-first search, we could take a path like Ash -> Brian -> 
