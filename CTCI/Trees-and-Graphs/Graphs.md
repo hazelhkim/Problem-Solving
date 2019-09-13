@@ -141,7 +141,7 @@ To see why this is faster, consider a graph where every node has at most k adjac
 - In traditional breadth-first search, we would search up to k nodes in the first "level" of the search. In the second level, we would search up to k nodes for each of those first k nodes, so k^2 nodes total (thus far). We would do this d times, so that's O(K^d) nodes. 
 - In bidirectional search, we have two searches that collide after approximately d/2 levels (the midpoint of the path). The search form s visits approximately k^(d/2), as does the search from t. That's approximately 2K^(d/2), or O(K^(d/2)), nodes total.
 
-**This might seem like a minor difference, but it's not. It's huge. Recall that (K^(d/2))* (K^(d/2)) = K^d. The bidirectional search is actually faster by a factor of K^(d/2). **
+** This might seem like a minor difference, but it's not. It's huge. Recall that (K^(d/2))* (K^(d/2)) = K^d. The bidirectional search is actually faster by a factor of K^(d/2). **
 <br />
 *Put another way: if our system could only support searching "friend of friend" paths in breadth-first search, it could not likely support "friend of friend of friend of friend" paths. We can suport paths that are twice as long.*
 
