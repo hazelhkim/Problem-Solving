@@ -55,7 +55,7 @@ Tree and graph questions are rife with ambiguous details and incorrect assumptio
 
 ### 4. Complete Binary Trees
 
-A complete binary tree is a binary tree in which every level of the tree is fully filled, except for perhaps the last level. To the extent that the last level is filled, it is filled left to right. 
+A complete binary tree is a binary tree in which every level of the tree is fully filled, except for perhaps the last level. To the extent that the last level is filled, it is filled **left** to right. 
 
 <img width="637" alt="Screen Shot 2019-09-11 at 3 18 03 PM" src="https://user-images.githubusercontent.com/46575719/64739600-632c8600-d4a7-11e9-90d0-ae04a77e860f.png">
 
