@@ -6,8 +6,7 @@ Tree is a type of graph. <br />
 
 A nice way to understand a tree is with a **recursive explanation**. <br />
 
-A tree is a data structure composed of nodes. <br />
-
+A tree is a data structure composed of nodes.
 1. Each tree has a root node. ( Actually, this isn't strictly necessary in graph theory, but it's usually how we use trees in programming, and especially programming interviews.) <br />
 2. The root node has zero or more child nodes. <br />
 3. Each child node has zero or more child nodes, and so on. <br />
@@ -19,7 +18,7 @@ Other Features <br />
 3. They could have any data type as values. <br />
 4. They may or may not have links back to their parent nodes. <br />
 
-A very simple class definitino for Node is:
+A very simple class definition for Node is:
 ```java
 class Node {
     public String name;
@@ -30,25 +29,24 @@ Tree and graph questions are rife with ambiguous details and incorrect assumptio
 
 ### 1. Trees vs Binary Trees.
 
-A binary tree is a tree in which each node has up to two children. 
-Not all trees are binary trees. For example, if the tree is not a binary tree and has three children, you could call it a ternary tree.
-You might use a 10-ary tree, with each node having up to 10 children. 
-<br />
-A node is called a "leaf" node if it has no children. 
+- A binary tree is a tree in which each node has up to two children. 
+- Not all trees are binary trees. For example, if the tree is not a binary tree and has three children, you could call it a ternary tree.
+- You might use a 10-ary tree, with each node having up to 10 children. 
+- A node is called a "leaf" node if it has no children. 
 
 ### 2. Binary Tree vs. Binary Search Tree
 
-A binary search tree is a binary tree in which every node fits a specific ordering property: 
+- A binary search tree is a binary tree in which every node fits a specific ordering property: <br />
 **all left descendents <= n < all right descendents**. This must be true for each node n. <br />
+- The tree might or might not have duplicate values. If it has them, the duplicate values will be on the right or can be on either side. All are valid definitions -- clarify this with interviewer. <br />
+- Dont' assume binary tree would be a binary search tree. Be sure to ask. 
 
--> Under some definitions, the tree cannot have duplicate values. In others, the duplicate values will be on the right or can be on eigher side. All are valid definitions, but you should clarify this with your interviewer. <br />
--> Many candidates assuem the interviewer means a binary search tree. Be sure to ask. A binary search tree imposes the condition that, for each node, its left descendents are less than or equal to the current node, which is less than the right descendenrts. <br />
 <img width="614" alt="Screen Shot 2019-09-11 at 3 08 09 PM" src="https://user-images.githubusercontent.com/46575719/64739117-0086ba80-d4a6-11e9-840c-7e29941b33d5.png">
 
 ### 3. Balanced vs. Unbalanced.
 
 1. While many trees are balanced, not all are.
-Note that balancing a tree does not mean the left and right subtrees are exactly the same size (like you see under "perfect binary trees" in the following diagram. )
+ - Note that balancing a tree does not mean the left and right subtrees are exactly the same size (like you see under "perfect binary trees" in the following diagram. )
 <br />
 2. "Balanced" tree actually means something not terribly imbalanced. It's balanced enough to ensure O(log n) times for insert and find, but it's not necessarily as balanced as it could be. <br />
 <br />
@@ -76,7 +74,7 @@ Note that perfect trees are rare in interviews and in real life, as a perfect tr
 
 ## Binary Tree Traversal
 
-Prior to your interview, it is important to be confortable implementing in-order, post-order, and pre-order traversal. The most common of these is in-order traversal.
+Prior to your interview, it is important to be comfortable implementing in-order, post-order, and pre-order traversal. The most common of these is in-order traversal.
 
 ### In-Order Traversal
 
