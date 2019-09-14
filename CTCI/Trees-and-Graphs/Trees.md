@@ -17,8 +17,8 @@ Other Features   <br />
 1. The tree cannot contain cycles.  <br />
 2. The nodes may or may not be in a particular order. <br />
 3. They could have any data type as values. <br />
-4. They may or may not have links back to their parent nodes. <br />
-
+4. They may or may not have links back to their parent nodes.
+<br />
 A very simple class definition for Node is:
 ```java
 class Node {
