@@ -21,6 +21,7 @@ Other Features   <br />
 
 <br />
 A very simple class definition for Node is:
+
 ```java
 class Node {
     public String name;
