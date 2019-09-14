@@ -45,12 +45,12 @@ Tree and graph questions are rife with ambiguous details and incorrect assumptio
 
 ### 3. Balanced vs. Unbalanced.
 
-1. While many trees are balanced, not all are.
+- While many trees are balanced, not all are.
  - Note that balancing a tree does not mean the left and right subtrees are exactly the same size (like you see under "perfect binary trees" in the following diagram. )
 <br />
-2. "Balanced" tree actually means something not terribly imbalanced. It's balanced enough to ensure O(log n) times for insert and find, but it's not necessarily as balanced as it could be. <br />
+- "Balanced" tree actually means something not terribly imbalanced. It's balanced enough to ensure O(log n) times for insert and find, but it's not necessarily as balanced as it could be. <br />
 <br />
-3. Two common types of balanced trees: 1) red-black trees, 2) AVL trees.
+- Two common types of balanced trees: 1) red-black trees, 2) AVL trees.
 
 ### 4. Complete Binary Trees
 
