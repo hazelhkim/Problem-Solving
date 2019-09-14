@@ -1,6 +1,6 @@
 ## Binary Heaps (Min-Heaps and Max-Heaps)
 
-1) We'll just discuss min-heaps here -> ascending order. 
+1) We'll just discuss min-heaps here -> **ascending order**. 
   - Max-heaps are essentially equivalent, but the elements are in descending order. <br />
 
 2) A min-heap is a **complete binary tree** (that is, **totally filled other than the rightmost elements** on the last level) where each node is smaller than its children. The root, therefore, is the minimum element in the tree. <br />
