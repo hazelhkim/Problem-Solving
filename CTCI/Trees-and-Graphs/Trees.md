@@ -11,7 +11,9 @@ A tree is a data structure composed of nodes.
 2. The root node has zero or more child nodes. <br />
 3. Each child node has zero or more child nodes, and so on. <br />
  <br />
+ 
 Other Features 
+
 <br />
 1. The tree cannot contain cycles.  <br />
 2. The nodes may or may not be in a particular order. <br />
