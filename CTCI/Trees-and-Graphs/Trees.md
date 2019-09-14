@@ -118,7 +118,7 @@ void postOrderTraversal(TreeNode node) {
   }
 }
 ```
-In an post-order traversal, the root is always the last node visited. 
+In a post-order traversal, the root is always the last node visited. 
 
 
 
