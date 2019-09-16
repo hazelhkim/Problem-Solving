@@ -2,10 +2,10 @@
 
 - While there are a large number of recursive problems, many follow **similar patterns**. 
 - A good hint that a problem is recursive is that it can be built off of **subproblems**. <br />
-- When you hear a problem beginning with the following statements, it's often (though not always) a good candidate for recursion: 
+- When you hear a problem beginning with the following statements, it's often (though not always) a good candidate for recursion.
         - "Design an algorithm to compute the nth ...," 
         - "Write code to list the first n...," 
-        - "Implement a method to compute all ...,"
+        - "Implement a method to compute all ...," 
         - and so on.
 
 **Tip**
