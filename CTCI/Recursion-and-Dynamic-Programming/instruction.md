@@ -89,8 +89,50 @@ What is the **runtime** of this function?
     - If you look at the subtree, you might notice that (excluding the leaf nodes and those immediately above it) the right subtree of any node is always smaller than the left subtree. 
     - If they were the same size, we'd have an O(2^n) runtime. But since the right and left subtrees are not the same size, the tru runtime is closer to (1.6^n). 
     - Saying O(2^n) is still technically correct though as it describes an upper bound on the runtime. Either way, we still have an exponential runtime. 
+- Indeed, if we implemented this on a computer, we'd see the number of seconds increase exponentially.
+  - We should look for a way to optimize this
+<img width="335" alt="Screen Shot 2019-09-16 at 10 31 58 AM" src="https://user-images.githubusercontent.com/46575719/64966726-4f00d400-d86d-11e9-861c-6934cce005f9.png">
+
+#### Fibonacci numbers *<Top-Down Dynamic Programming (or Memoization)>*
+
+
+1. In the recursion tree, there are lots of identical nodes. For example, fib(3) appears twice and fib(2) appears three times. Why should we recompute these from scratch each time?
+
+2. In fact, when we call fib(n), we shouldn't have to do much more than O(n) calls, since there's only O(n) possible values we can throw at fib. Each time we compute fib(i), we should just cache this result and use it later. -> This is exactly what **memoization** is.
+
+3. With just a small modification, we can tweak this function to run in O(n) time. We simply cache the results of fibonacci(i) betweeen calls. 
   
+```java
+
+int fibonacci(int n) {
+  return fibonacci(n, new int[n+1]);
+}
+
+int fibonacci(int i, int[] memo) {
+  if (i == 0 || i == 1) return i;
   
+  if(memo[i] == 0) {
+    memo[i] = fibonacci(i-1, memo) + fibonacci(i-2, memo);
+  }
+
+  return memo[i];
+}
+```
+4. Fast! (DP is faster than Recursion.) While the first recursive function may take over a minute to generate the 50th Fibonacci number on a typical computer, the dynamic programming method can generate the 10,000th Fibonacci number in just fractions of a millisecond. (Of course, with this exact code, the int would have overflowed very early on.)
+
+5. Now, if we draw the recursion tree, it looks something like this (the black boxes represent cached calls that returned immediately):
+
+<img width="513" alt="Screen Shot 2019-09-16 at 4 37 28 PM" src="https://user-images.githubusercontent.com/46575719/64991687-52618300-d8a0-11e9-9909-ed4f6027097c.png">
+
+
+
+
+
+
+
+
+
+
 
 
 
