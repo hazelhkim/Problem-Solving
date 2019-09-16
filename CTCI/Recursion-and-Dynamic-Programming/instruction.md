@@ -2,12 +2,11 @@
 
 - While there are a large number of recursive problems, many follow **similar patterns**. 
 - A good hint that a problem is recursive is that it can be built off of **subproblems**. <br />
-
-When you hear a problem beginning with the following statements, it's often (though not always) a good candidate for recursion: 
-    - "Design an algorithm to compute the nth ...," <br />
-    - "Write code to list the first n...," <br />
-    - "Implement a method to compute all ...," <br />
-    - and so on.
+- When you hear a problem beginning with the following statements, it's often (though not always) a good candidate for recursion: 
+        - "Design an algorithm to compute the nth ...," 
+        - "Write code to list the first n...," 
+        - "Implement a method to compute all ...,"
+        - and so on.
 
 **Tip**
 - People typtically have about 50% accuracy in their "this sounds like a recursive problem" instinct. Use that instict, since that 50% is valuable. But don't be afraid to look at the problem in a different way, even if you initially thought it seemed recursive. There's also a 50% chance that you were wrong. 
