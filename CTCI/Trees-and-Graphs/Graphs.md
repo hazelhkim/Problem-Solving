@@ -28,7 +28,7 @@ Visually, a graph is like this:
 
 - This is the most common way to represent a graph. 
 - Every vertex (or node) stores a list of adjacent vertices. 
-    - In an undirected graph, an edge like (a, b) would be stored twice: once in a's adjacent vertices and once in b's adjacent vbertices. 
+    - In an undirected graph, an edge like (a, b) would be stored twice: once in a's adjacent vertices and once in b's adjacent vertices. 
 - A simple class definition for a **graph node** could look essentially the same as a **tree node**. 
 
 ```java
@@ -42,7 +42,7 @@ class Node {
 }
 
 ```
-- The Graph class is used beacuse, unlike in a tree, you can't necessarily reach all the nodes from a single node. 
+- The Graph class is used because, unlike in a tree, you can't necessarily reach all the nodes from a single node. 
 
 - You don't necessarily need any additional classes to represent a graph. An array (or a hash table) of lists ( arrays, arraylists, linked lists, etc.) can store the adjacency list. The graph above could be represented as: <br />
 0: 1 <br />
@@ -73,7 +73,7 @@ An adjacency matrix is an NxN boolean matrix (where N is the number of nodes), w
 
 The two most common ways to search a graph are depth-frist search and breadth-first search. <br />
 
-- In **depth-first search (DFS)**, we start at the root (or another arbitrarily selected node) and explore each branch compeletely before moving on to the next branch. That is, we go deep first (hence thename depth-first search) before we go wide.
+- In **depth-first search (DFS)**, we start at the root (or another arbitrarily selected node) and explore each branch compeletely before moving on to the next branch. That is, we go deep first (hence the name depth-first search) before we go wide.
 - In **bread-first search (BFS)**, we start at the root (or another arbitrarily selected node) and explore each neighbor before going on to any of their children. That is, we go wide (hence the name depth-first search) before we go deep.
 
 See the below depiction of a graph and its depth-first and breadth-first search (assuming neighbors are iterated in numerical order).
@@ -81,12 +81,12 @@ See the below depiction of a graph and its depth-first and breadth-first search 
 <img width="660" alt="Screen Shot 2019-09-12 at 1 31 36 PM" src="https://user-images.githubusercontent.com/46575719/64818797-aea36a80-d561-11e9-81c2-312b652caf31.png">
 
 - Breadth-first search and depth-first search tend to be used in different scenarios. 
-    **DFS**
-    - preferred if we want to visit every node in the graph.
-    - a bit simpler.
-    **BFS**
-    - preferred if we want to find the shortest path (or just any path) between two nodes.
-    - e.g. consider representing all the friendships in the entire world in a graph and trying to find a path of firendships between Ash and Vanessa.
+    - **DFS**
+        - preferred if we want to visit every node in the graph.
+        - a bit simpler.
+    - **BFS**
+        - preferred if we want to find the shortest path (or just any path) between two nodes.
+        - e.g. consider representing all the friendships in the entire world in a graph and trying to find a path of firendships between Ash and Vanessa.
 
 ### Depth-First Search (DFS)
 In DFS, we visit a node a and then iterate through each of a's neighbors. When visiting a node b that is a neighbor of a, we **visit all of b's neighbors before going on to a's other neighbors**. That is, a exhaustively searches b's branch before any of its other neighbors. <br />
