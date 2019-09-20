@@ -133,7 +133,7 @@ int fibonacci(int i, int[] memo) {
 7. This is not actually how the recursion occurred. However, by expanding the further up nodes rather than the lower nodes, you have a tree that grows wide before it grows deep. (It's like doing this breadth-first rather than depth-first.) Sometimes this makes it easier to compute the number of nodes in the tree. All you're really doing is changing which nodes you expand and which ones return cached values. Try this if you're stuck on computing the runtime of a dynamic programming problem.
 
 
-#### Fibonacci numbers *<Bottom-Up Dynamic Programming>*
+#### Fibonacci numbers *<Bottom-Up Dynamic Programming()>*
 
 We can also take this approach and implement it with bottom-up dynamic programming. Think about doing the same things as the recursive memoized approach, but in reverse.
 
