@@ -125,16 +125,52 @@ int fibonacci(int i, int[] memo) {
 <img width="513" alt="Screen Shot 2019-09-16 at 4 37 28 PM" src="https://user-images.githubusercontent.com/46575719/64991687-52618300-d8a0-11e9-9909-ed4f6027097c.png">
 
 
+6. How many nodes are in this tree now? We might notice that the tree now just shoots straight down, to a depth of roughly n. Each node of those nodes has one other child, resulting in roughly 2n children in the tree. This gives us a runtime of 0 (n). Often it can be useful to picture the recursion tree as something like this:
+
+<img width="606" alt="Screen Shot 2019-09-19 at 11 49 44 PM" src="https://user-images.githubusercontent.com/46575719/65298100-3710a500-db38-11e9-89a7-0dd02e66dc0f.png">
 
 
+7. This is not actually how the recursion occurred. However, by expanding the further up nodes rather than the lower nodes, you have a tree that grows wide before it grows deep. (It's like doing this breadth-first rather than depth-first.) Sometimes this makes it easier to compute the number of nodes in the tree. All you're really doing is changing which nodes you expand and which ones return cached values. Try this if you're stuck on computing the runtime of a dynamic programming problem.
 
 
+#### Fibonacci numbers *<Bottom-Up Dynamic Programming>*
 
+We can also take this approach and implement it with bottom-up dynamic programming. Think about doing the same things as the recursive memoized approach, but in reverse.
 
+First, we compute fib (1) and fib (0), which are already known from the base cases.Then we use those to compute fib (2). Then we use the prior answersto compute fib (3), then fib (4), and so on.
 
+```java
+int fibonacci(int n) {
+  if ( n == 0 ) return 0;
+  
+  int[] memo = new int[n];
+  memo[0] = 0;
+  memo[1] = 1;
+  for( int i = 2; i < n ; i++ ) {
+    memo [i] = memo [ i - 1 ] + memo [ i - 2 ];
+  }
+  return memo [ n - 1 ] + memo [ n - 2 ];
+}
 
+```
 
+If you really think about how this works, you only use memo[i] for memo[i+l] and memo[i+2].Youdon't need it after that. Therefore, we can get rid of the memo table and just store a few variables.
 
+```java
+int fibonacci ( int n ) {
 
+  if ( n == 0 ) return 0;
+  int a = 0;
+  int b = 1;
+  for( int i = 2; i < n ; i ++ ) {
+    int c = a + b;
+    a = b;
+    b = c;
+  }
+  return a + b;
+}
 
+```
 
+This is basically storing the results from the last two Fibonacci values into a and b. At each iteration, we computethenextvalue(c = a + b)andthenmove(b, c = a + b) into (a, b) . < br />
+This explanation might seem like overkill for such a simple problem, but truly understanding this process will make more difficult problems much easier. Going through the problems in this chapter, many of which use dynamic programming, will help solidify your understanding.
