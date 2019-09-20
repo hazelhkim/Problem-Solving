@@ -172,5 +172,5 @@ int fibonacci ( int n ) {
 
 ```
 
-This is basically storing the results from the last two Fibonacci values into a and b. At each iteration, we computethenextvalue(c = a + b)andthenmove(b, c = a + b) into (a, b) . < br />
+This is basically storing the results from the last two Fibonacci values into a and b. At each iteration, we computethenextvalue(c = a + b)andthenmove(b, c = a + b) into (a, b). < br />
 This explanation might seem like overkill for such a simple problem, but truly understanding this process will make more difficult problems much easier. Going through the problems in this chapter, many of which use dynamic programming, will help solidify your understanding.
