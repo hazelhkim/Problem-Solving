@@ -10,8 +10,10 @@ class Solution {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         Arrays.sort(arr);
         List<List<Integer>> ans = new ArrayList<>();
-        int min = Math.abs(arr[0] - arr[1]);
+        int min = Math.abs(arr[0] - arr[1]); // it can be: int min = Integer.MAX_VALUE; instead. :)
         for(int i = 0; i < arr.length-1; i ++) {
+            
+            //This can be just like: min = Math.min(min, arr[i] - arr[i-1]);
             if( min > Math.abs(arr[i] - arr[i+1])) {
                     min = Math.abs(arr[i] - arr[i+1]); 
             }
