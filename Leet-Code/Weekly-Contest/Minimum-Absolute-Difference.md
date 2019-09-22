@@ -3,7 +3,7 @@
 <img width="822" alt="Screen Shot 2019-09-22 at 12 56 27 AM" src="https://user-images.githubusercontent.com/46575719/65382460-dae28800-dcd3-11e9-81c7-eafe61e84fd5.png">
 
 
-#### My Answer:
+#### My Answer.
 
 ```java
 class Solution {
@@ -30,6 +30,6 @@ class Solution {
 }
 ```
 
-####Detail
+#### Detail.
 
 <img width="644" alt="Screen Shot 2019-09-22 at 12 58 13 AM" src="https://user-images.githubusercontent.com/46575719/65382471-1aa96f80-dcd4-11e9-9dd0-d470062d1a2b.png">
