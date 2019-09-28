@@ -66,5 +66,5 @@ class Solution {
 
 <img width="799" alt="Screen Shot 2019-09-28 at 7 53 15 PM" src="https://user-images.githubusercontent.com/46575719/65823716-a158d200-e229-11e9-9988-1fe55fe0a034.png">
 
-I took advantage of Arrays.sort() method so that I didn't need to use Math.abs() method; I can substract the element from the previous element. It wil always be non-negative value. 
+I took advantage of Arrays.sort() method so that I didn't need to use Math.abs() method; I can substract the element from the previous element. It wil always be a non-negative value. 
 
