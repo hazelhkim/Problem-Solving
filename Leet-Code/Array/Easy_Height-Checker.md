@@ -57,3 +57,4 @@ class Solution {
 }
 
 ```
+<img width="550" alt="Screen Shot 2019-09-28 at 1 59 04 AM" src="https://user-images.githubusercontent.com/46575719/65812311-8d629100-e193-11e9-875d-f05a541b9067.png">
