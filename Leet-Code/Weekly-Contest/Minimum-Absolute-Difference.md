@@ -68,3 +68,57 @@ class Solution {
 
 I took advantage of Arrays.sort() method so that I didn't need to use Math.abs() method; I can substract the element from the previous element. It wil always be a non-negative value. 
 
+#### Other Solutions:
+
+1. It used ** min = Math.min(a, b); ** to assign the min value instead of using if-condition statement. 
+
+```java
+    public static List<List<Integer>> minimumAbsDifference(int[] arr) {
+        Arrays.sort(arr); // imp!!! to sort elements 
+        int min = Integer.MAX_VALUE;
+		//find min diff
+        for (int i = 1; i < arr.length; i++) {
+            min = Math.min(min, arr[i] - arr[i - 1]);
+        }
+		//add all element with diff of min
+        List<List<Integer>> result = new ArrayList<>();
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] - arr[i - 1] == min) {
+                List<Integer> list = new ArrayList<>();
+                list.add(arr[i - 1]);
+                list.add(arr[i]);
+                result.add(list);
+            }
+        }
+        return result;
+    }
+
+```
+
+2. It used Arrays.asList() method to assign the elemnents into the List<List<Integer>> data structure.
+
+```java
+
+    public List<List<Integer>> minimumAbsDifference(int[] arr) {
+        List<List<Integer>> res = new ArrayList();
+        //sort elements
+        Arrays.sort(arr);
+        //init our min difference value
+        int min = Integer.MAX_VALUE;
+        //start looping over array to find real min element. Each time we found smaller difference
+        //we reset resulting list and start building it from scratch. If we found pair with the same
+        //difference as min - add it to the resulting list
+        List<Integer> minDiffList = new ArrayList();
+        for (int i = 0; i < arr.length - 1; i++) {
+            int diff = arr[i + 1] - arr[i];
+            if (diff < min) {
+                min = diff;
+                res = new ArrayList();
+                res.add(Arrays.asList(arr[i], arr[i + 1]));
+            } else if (diff == min) {
+                res.add(Arrays.asList(arr[i], arr[i + 1]));
+            }
+        }
+        return res;
+    }
+```
