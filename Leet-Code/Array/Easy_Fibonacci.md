@@ -21,7 +21,7 @@ class Solution {
 
 #### Solution 1. Iterative
 
-Time complexity: O(n)
+Time complexity: O(n) <br />
 Space complexity: O(1)
 
 ```java
@@ -47,7 +47,7 @@ class Solution
 
 #### Solution 2. Recursive
 
-Time complexity: O(2^n) , since T(n) = T(n-1) + T(n-2) is an exponential time
+Time complexity: O(2^n) , since T(n) = T(n-1) + T(n-2) is an exponential time <br />
 Space complexity: O(n) , space for recursive function call stack
 
 ```java
@@ -65,7 +65,7 @@ class Solution
 
 #### Solution 3. Dynamic Programming - Top Down Approach
 
-Time complexity: O(n)
+Time complexity: O(n) <br />
 Space complexity: O(n)
 
 ```java
@@ -87,7 +87,7 @@ class Solution
 
 #### Solution 4. Dynamic Programming - Bottom Up Approach
 
-Time complexity: O(n)
+Time complexity: O(n) <br />
 Space complexity: O(n)
 
 ```java
