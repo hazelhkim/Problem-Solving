@@ -31,7 +31,7 @@ class Solution {
     }
 }
 ```
-
+<img width="760" alt="Screen Shot 2019-09-30 at 3 52 21 PM" src="https://user-images.githubusercontent.com/46575719/65911226-4c889900-e39a-11e9-8c7f-1d524ffd77ff.png">
 
 #### Other Solution: 
 
