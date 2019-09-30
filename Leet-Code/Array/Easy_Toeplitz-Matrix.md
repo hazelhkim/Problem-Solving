@@ -48,10 +48,10 @@ class Solution {
                 if (!groups.containsKey(r-c))
                     groups.put(r-c, matrix[r][c]);
                 else if (groups.get(r-c) != matrix[r][c])
-                    return False;
+                    return false;
             }
         }
-        return True;
+        return true;
     }
 }
 
