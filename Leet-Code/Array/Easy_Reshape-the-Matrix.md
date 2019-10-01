@@ -105,4 +105,4 @@ public class Solution {
 Timce Complexity: O(M*N). <br />
 Space Complexity: O(M*N).
 
-<img width="660" alt="Screen Shot 2019-10-01 at 1 55 21 AM" src="https://user-images.githubusercontent.com/46575719/65937742-d4988e00-e3ee-11e9-80b6-4705bbb19c3e.png">
+<img width="659" alt="Screen Shot 2019-10-01 at 1 54 42 AM" src="https://user-images.githubusercontent.com/46575719/65937827-0dd0fe00-e3ef-11e9-86b8-0867389f80fb.png">
