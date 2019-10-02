@@ -37,7 +37,7 @@ class Solution {
 }
 ```
 
-Solution:
+Solution: Two Pointers
 
 ```java
     public void duplicateZeros(int[] arr) {
