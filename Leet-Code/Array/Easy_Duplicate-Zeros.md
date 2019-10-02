@@ -59,5 +59,18 @@ Solution: Two Pointers
         }
     }
 ```
+Another Solution from Discussion: <br />
+First, go left to right and count how many shifts (sh) we can fit in our array. <br />
+Then, go right to left and move items; if it's zero - duplicate it and decrement the shift.
 
+```java
+public void duplicateZeros(int[] a) {
+  int i = 0, sh = 0;
+  for (i = 0; sh + i < a.length; ++i) sh += a[i] == 0 ? 1 : 0;
+  for (i = i - 1; sh > 0; --i) {
+    if (i + sh < a.length) a[i + sh] = a[i];
+    if (a[i] == 0) a[i + --sh] = a[i];
+  }
+}
+```
 
