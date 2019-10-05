@@ -77,6 +77,47 @@ class Solution {
 <img width="680" alt="Screen Shot 2019-10-05 at 5 04 07 PM" src="https://user-images.githubusercontent.com/46575719/66260855-285dfb00-e792-11e9-87d8-274cb50acc5b.png">
 
 
+#### Solutions from Discussion
+Same approach different organization.
 
+1. Iterative Solution.
 
+```java
+class Solution {
+    public List<Integer> preorder(Node root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) return list;
+        
+        Stack<Node> stack = new Stack<>();
+        stack.add(root);
+        
+        while (!stack.empty()) {
+            root = stack.pop();
+            list.add(root.val);
+            for (int i = root.children.size() - 1; i >= 0; i--)
+                stack.add(root.children.get(i));
+        }
+        
+        return list;
+    }
+}
+```
+
+2. Recursive Solution.
+```java
+class Solution {
+    public List<Integer> list = new ArrayList<>();
+    public List<Integer> preorder(Node root) {
+        if (root == null)
+            return list;
+        
+        list.add(root.val);
+        for(Node node: root.children)
+            preorder(node);
+                
+        return list;
+    }
+}
+
+```
 
