@@ -79,8 +79,10 @@ There are two types of right shift operators.
  
   <img width="319" alt="Screen Shot 2019-10-07 at 1 36 07 AM" src="https://user-images.githubusercontent.com/46575719/66287221-d789f780-e8a2-11e9-9804-46ddd0348a93.png">
   
+#### An arithmetic shift 
   - In an arithmetic right shift, we shift values to the right but fill in the new bits with the value of the sign bit.
-This has the effect of (roughly) dividing by two. It is indicated by a >>operator.
+This has the effect of (roughly) dividing by two. 
+  - It is indicated by a >> operator.
 
 <img width="314" alt="Screen Shot 2019-10-07 at 1 36 22 AM" src="https://user-images.githubusercontent.com/46575719/66287230-dfe23280-e8a2-11e9-9031-4fcc72d08d72.png">
 
