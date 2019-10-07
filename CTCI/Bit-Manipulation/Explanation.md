@@ -84,6 +84,8 @@ This has the effect of (roughly) dividing by two. It is indicated by a >>operato
 
 <img width="314" alt="Screen Shot 2019-10-07 at 1 36 22 AM" src="https://user-images.githubusercontent.com/46575719/66287230-dfe23280-e8a2-11e9-9031-4fcc72d08d72.png">
 
+What do you think these functions would do on parameters x = -93242 and count 40?
+
 ```java
 int repeatedArithmeticShift(int x, int count) {
   for(int i = 0; i < count; i++) {
