@@ -54,7 +54,17 @@ To understand these expressions, recall that these operations occur bit-by-bit, 
   
 - Computers typically store integers in two's complement representation.
 - A positive number is represented as itself while a negative number is represented as the two's complement of its absolute value (with a 1 in its sign bit to indicate that a negative value).
-- 
+- The two's complement of an N-bit number (where N is the number of bits used for the number, excluding the sign bit) is the complement of the number with respect to 2^N.
+    - Let's look at the 4-bit integer - 3 as an example. If it's a 4-bit number, we have one bit for the sign and three bits for the value. We want the complement with respect to 2^3, which is 8. The complement of 3 (the abso- lute value of - 3) with respect to 8 is 5. 5 in binary is 1131. Therefore, -3 in binary as a 4-bit number is 1101, with the first bit being the sign bit.
+      - In other words, the binary representation of -K (negative K) as a N-bit number is concat (1,  2^(N• 1) - K).
+      - Another way to look at this is that we invert the bits in the positive representation and then add 1. 3 is 011 in binary. Flip the bits to get 100, add 1 to get 101, then prepend the sign bit (1) to get 1101.
+
+- In a four-bit integer, this would look like the following:
+
+<img width="438" alt="Screen Shot 2019-10-07 at 1 34 42 AM" src="https://user-images.githubusercontent.com/46575719/66287170-a5789580-e8a2-11e9-8a9b-9d57e0656c7f.png">
+
+- Observe that the absolute values of the integers on the left and right always sum to 23, and that the binary values on the left and right sides are identical, other than the sign bit. Why is that?
+
   
 ### Arithmetic vs. Local Right Shift
 There are two types of right shift operators.
@@ -66,6 +76,32 @@ There are two types of right shift operators.
   - It is indicated with a >>> operator.
   - On a 8-bit integer (where the sign bit is the most significant bit), this would look like the image below.
   - The sign bit is indicated with a gray background.
+ 
+  <img width="319" alt="Screen Shot 2019-10-07 at 1 36 07 AM" src="https://user-images.githubusercontent.com/46575719/66287221-d789f780-e8a2-11e9-9804-46ddd0348a93.png">
+  
+  - In an arithmetic right shift, we shift values to the right but fill in the new bits with the value of the sign bit.
+This has the effect of (roughly) dividing by two. It is indicated by a >>operator.
+
+<img width="314" alt="Screen Shot 2019-10-07 at 1 36 22 AM" src="https://user-images.githubusercontent.com/46575719/66287230-dfe23280-e8a2-11e9-9031-4fcc72d08d72.png">
+
+```java
+int repeatedArithmeticShift(int x, int count) {
+  for(int i = 0; i < count; i++) {
+    x >>= 1; //Arithmetic shift by 1
+  }
+  return x;
+}
+
+int repeatedLogicalShift(int x, int count) {
+  for(int i = 0; i < count; i++) {
+    x >>>= 1; // Logical shift by 1
+  }
+  return x;
+}
+```
+- With the logical shift, we would get e because we are shifting a zero into the most significant bit repeatedly.
+- With the arithmetic shift, we would get -1 because we are shifting a one into the most significant bit repeatedly. A sequence of allis in a (signed) integer represents -1.
+
   
 ### Common Bit Tasks: Getting and Setting
 The following operations are very important to know, but do not simply memorize them.
