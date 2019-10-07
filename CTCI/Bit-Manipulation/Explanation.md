@@ -4,50 +4,49 @@
   - Sometimes, the question explicitly calls for bit manipulation. 
   - Other times, it's simply a useful technique to optimize your code. 
   
- - Should be comfortable doing bit manipulation by hand, as well as with code.
+- Should be comfortable doing bit manipulation by hand, as well as with code.
   - It's easy to make little mistakes.
   
  ### Bit Manipulation By Hand
  
- - The items in the third column can be solved manually or with "tricks" (described below). For simplicity, assume that these are four-bit numbers.
- - If you get confused, work them through as a base 10 number. You can then apply the same process to a binary number.
- - Remember that ^ indicates an XOR, and ~ is a NOT (negation).
+- The items in the third column can be solved manually or with "tricks" (described below). For simplicity, assume that these are four-bit numbers.
+- If you get confused, work them through as a base 10 number. You can then apply the same process to a binary number.
+- Remember that ^ indicates an XOR, and ~ is a NOT (negation).
  
- 0110 + 0010 = 1000 <br />
- 0011 + 0010 = 0101 <br />
- 0110 + 0110 = 1100 <br />
-  - 0110 + 0110 is equivalent to 0110 * 2, which is equivalent to shifting 0110 left by 1.
- 0110 - 0011 = 0101 <br />
- 1000 - 0110 = 0010 <br />
- 0011 * 0101 = 1111 <br />
- 0011 * 0011 = 1001 <br />
- 0100 * 0011 = 1100 <br />
-  - 0100 equals 4, and multiplying by 4 is just left shifting by 2. So we shift 0011 left by 2 to get 1100.
- 1101 >> 2 = 0011 <br />
- 1101 ^ 0101 = 1000 <br />
- 1101 ^ (~1101) = 1111 <br />
-  - Think about this operation bit by bit. If you XOR a bit with its own negated value, you will always get 1. Therefore, the solution a^(~a) will be a sequene of 1s. 
- 1011 & (~0 << 2) = 1000 
-  - ~0 is a sequence of 1s, so ~0<<2 is 1s followed by two 0s. ANDing that with another value will clear the last two bits of the value.
+  - 0110 + 0010 = 1000 
+  - 0011 + 0010 = 0101 
+  - 0110 + 0110 = 1100
+      - 0110 + 0110 is equivalent to 0110 * 2, which is equivalent to shifting 0110 left by 1.
+  - 0110 - 0011 = 0101 
+  - 1000 - 0110 = 0010 
+  - 0011 * 0101 = 1111 
+  - 0011 * 0011 = 1001
+  - 0100 * 0011 = 1100 
+    - 0100 equals 4, and multiplying by 4 is just left shifting by 2. So we shift 0011 left by 2 to get 1100.
+  - 1101 >> 2 = 0011 <br />
+  - 1101 ^ 0101 = 1000 <br />
+  - 1101 ^ (~1101) = 1111 <br />
+    - Think about this operation bit by bit. If you XOR a bit with its own negated value, you will always get 1. Therefore, the solution a^(~a) will be a sequene of 1s. 
+  - 1011 & (~0 << 2) = 1000 
+    - ~0 is a sequence of 1s, so ~0<<2 is 1s followed by two 0s. ANDing that with another value will clear the last two bits of the value.
   
 ### Bit Facts and Tricks
   
 The following expressions are useful in bit manipulation. Don't just memorize them, though; think deeply about why each of these is true. <br />
 ( "1s" and "0s" to indicate a sequence of 1s or 0s, respectively.)
   
-x ^ 0s = x <br />
-x ^ 1s = ~x <br />
-x ^ x = 0 <br />
-<br />
+  - x ^ 0s = x 
+  - x ^ 1s = ~x 
+  - x ^ x = 0 
   
-x & 0s = 0 <br />
-x & 1s = x <br />
-x & x = x <br />
- <br />
+  - x & 0s = 0 
+  - x & 1s = x 
+  - x & x = x 
+ 
   
-x | 0s = x <br />
-x | 1s = 1s <br />
-x | x = x <br />
+  - x | 0s = x   
+  - x | 1s = 1s 
+  - x | x = x 
   
 - To understand these expressions, recall that these operations occur bit-by-bit, with what's happening on one bit never impacting the other bits.
 - This means that if one of the above statements is true for a single bit, then it's true for a sequence of bits.
