@@ -48,8 +48,7 @@ The following expressions are useful in bit manipulation. Don't just memorize th
   - x | 1s = 1s 
   - x | x = x 
   
-- To understand these expressions, recall that these operations occur bit-by-bit, with what's happening on one bit never impacting the other bits.
-- This means that if one of the above statements is true for a single bit, then it's true for a sequence of bits.
+To understand these expressions, recall that these operations occur bit-by-bit, with what's happening on one bit never impacting the other bits. This means that if one of the above statements is true for a single bit, then it's true for a sequence of bits.
   
 ### Two's Complement and Negative Numbers
   
