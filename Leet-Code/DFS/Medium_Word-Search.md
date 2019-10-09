@@ -1,6 +1,7 @@
 # Word Search
 
-<img width="548" alt="Screen Shot 2019-10-09 at 5 04 10 PM" src="https://user-images.githubusercontent.com/46575719/66520289-e0531700-eab6-11e9-9995-5eb062454b49.png">
+<img width="554" alt="Screen Shot 2019-10-09 at 5 06 30 PM" src="https://user-images.githubusercontent.com/46575719/66520456-2f994780-eab7-11e9-9eaf-f91752dbe8df.png">
+
 
 #### My Answer
 
@@ -33,6 +34,4 @@ class Solution {
 }
 
 ```
-
-
-<img width="548" alt="Screen Shot 2019-10-09 at 5 04 10 PM" src="https://user-images.githubusercontent.com/46575719/66520378-0aa4d480-eab7-11e9-928e-f838d379de9a.png">
+<img width="533" alt="Screen Shot 2019-10-09 at 5 06 35 PM" src="https://user-images.githubusercontent.com/46575719/66520449-2c9e5700-eab7-11e9-899b-c57307e6d3df.png">
