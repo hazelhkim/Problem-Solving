@@ -38,4 +38,32 @@ class Solution {
 }
 
 ```
-<img width="542" alt="Screen Shot 2019-09-28 at 12 54 09 AM" src="https://user-images.githubusercontent.com/46575719/65811699-7cf9e880-e18a-11e9-96ac-378017beba23.png">
+<img width="549" alt="Screen Shot 2019-10-12 at 6 50 49 PM" src="https://user-images.githubusercontent.com/46575719/66708622-607cb500-ed21-11e9-8fa3-d406d8c1034e.png">
+
+
+# Longest Continuous Increasing Subsequence
+
+<img width="650" alt="Screen Shot 2019-10-12 at 6 53 15 PM" src="https://user-images.githubusercontent.com/46575719/66708632-9457da80-ed21-11e9-9f65-ee18f7422cd9.png">
+
+
+#### Solution: Sliding Window Approach.
+[Intuition and Algorithm]
+Every (continuous) increasing subsequence is disjoint, and the boundary of each such subsequence occurs whenever nums[i-1] >= nums[i]. When it does, it marks the start of a new increasing subsequence at nums[i], and we store such i in the variable anchor.
+
+For example, if nums = [7, 8, 9, 1, 2, 3], then anchor starts at 0 (nums[anchor] = 7) and gets set again to anchor = 3 (nums[anchor] = 1). Regardless of the value of anchor, we record a candidate answer of i - anchor + 1, the length of the subarray nums[anchor], nums[anchor+1], ..., nums[i]; and our answer gets updated appropriately.
+
+```java
+class Solution {
+    public int findLengthOfLCIS(int[] nums) {
+        int ans = 0, anchor = 0;
+        for (int i = 0; i < nums.length; ++i) {
+            if (i > 0 && nums[i-1] >= nums[i]) anchor = i;
+            ans = Math.max(ans, i - anchor + 1);
+        }
+        return ans;
+    }
+}
+```
+[Complexity Analysis]
+- Time Complexity : O(N), where N is the length of `nums`. We perform one loop through `nums`.
+- Space Complexity : O(1), the space used by `anchor` and `ans`.
