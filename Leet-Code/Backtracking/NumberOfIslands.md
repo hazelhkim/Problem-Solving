@@ -1,5 +1,5 @@
 # Number of Islands (200)
-'''python
+```python
 class Solution {
     public int numIslands(char[][] grid) {
         if (grid == null || grid.length == 0) {return 0;}
@@ -30,4 +30,4 @@ class Solution {
             return 1;
     }
 }
-'''
+```
